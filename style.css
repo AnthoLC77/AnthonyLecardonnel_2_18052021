@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 50px;
+    font-family: 'Raleway', sans-serif;
 }
 
 header{
@@ -56,7 +57,12 @@ input[type="submit"]{
     background: #0065fc;
     color: white;
     padding: 12px;
-} 
+}
+
+.logo{
+    width: 17px;
+    height: 17px;
+}
 
 #barre-recherche img{
    
@@ -68,24 +74,6 @@ input[type="submit"]{
     padding: 12px 13px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #filtre{
     display: flex;
     align-items: center;
@@ -95,15 +83,6 @@ input[type="submit"]{
 #filtre p{
     margin-right: 40px;
 }
-
-
-
-
-
-
-
-
-
 
 .style-filtre img{
     position: relative;
@@ -124,3 +103,188 @@ input[type="submit"]{
     border-radius: 50px 50px;
     padding: 0 15px 0 0;
     max-width: 300px;
+}
+
+#hotel{
+    display: flex;
+    justify-content:
+}
+
+#grid-gauche{
+    background-color: #f2f2f2;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    padding: 40px;
+    margin-right: 80px;
+}
+
+.grid-hebergement{
+    display: grid;
+    grid-template: repeat(2, 200px)  / repeat(3, 240px);
+    column-gap: 70px;
+    row-gap: 40px;
+    justify-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6{
+    display: grid;
+    grid-template: 130px repeat(3, 20px) / 270px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.box1{
+    grid-area: 1 / 1 / 2 / 2;  
+}
+
+.box2{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.box3{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.box4{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.box5{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.box6{
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.grid-hebergement .divImg{
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 10px 10px 0 0;
+}
+
+.box1 .divImg{
+    background: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box2 .divImg{
+    background: url(images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box3 .divImg{
+    background: url(images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box4 .divImg{
+    background: url(images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box5 .divImg{
+    background: url(images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box6 .divImg{
+    background: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg); 
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.star img{
+    width: 12px;
+    height: auto;
+}
+
+.titre, .prix, .star{
+    margin-left: 15px;
+}
+
+.titre{
+    font-weight: 900;
+    color: black;
+}
+
+#grid-droit{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    width: 400px;
+    height: 600px;
+    padding: 40px;
+}
+
+.header-populaire{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#grid-populaire{
+    display: grid;
+    grid-template: repeat(2, 160px) / 400px ;
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.box7, .box8, .box9{
+    display: grid;
+    grid-template: repeat(2, 40px) 70px / 150px 165px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#grid-populaire .divImg{
+    grid-area: 1 / 1 / 4 / 2;
+    border-radius: 15px;
+}
+
+.box7 .divImg{
+    background: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box8 .divImg{
+    background: url(images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box9 .divImg{
+    background: url(images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#grid-populaire .star{
+    align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
