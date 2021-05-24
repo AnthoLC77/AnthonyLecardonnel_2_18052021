@@ -1,7 +1,14 @@
-body{
+*{
     margin: 0;
-    padding: 50px;
+    padding: 0;
+}
+
+
+body{
+    width: 1320px;
+    margin: auto;
     font-family: 'Raleway', sans-serif;
+    padding: 40px 0 0 0;
 }
 
 header{
@@ -9,9 +16,17 @@ header{
     justify-content: space-between;
 }
 
+h1{
+    margin: 20px 0px 8px 0px;
+}
+
+h2{
+    margin: 20px 0;
+}
+
 header img{
     width: 120px;
-    height: 65px;
+    height: 60px;
 }
 
 nav ul{
@@ -29,9 +44,34 @@ nav a{
     margin-left: 50px;
 }
 
+#lien_1{
+    color: #0065fc;
+}
+
+#lien_2{
+    color: #1f1f1f;
+}
+
+
+#lien_3{
+    color: #0065fc;
+    font-weight: bold;
+}
+
+#trait_dessus{
+    border-top: 2px solid #0065fc;
+    width: 150px;
+    height: auto;
+    position: relative;
+    bottom: 40px;
+    left: 36px;
+}
+
+
 form{
     display: flex;
     align-items: center;
+    margin: 20px 0 30px 0;
 }
 
 input{
@@ -39,13 +79,22 @@ input{
     display: inline-block;
     font-size: 15px;
     height: 40px;
+    box-shadow: none;
+    border: 0 none;
+    outline: 0;
 }
 
 input[type="text"]{
     width: 150px;
-    height: 40px;
+    height: 42px;
     padding: 0px 20px;
-    border: 1px solid rgb(233, 233, 233)
+    border: 1px solid rgb(233, 233, 233);
+}
+
+#ville::placeholder{
+    color: black;
+    font-size: 1em;
+    font-weight: bolder;
 }
 
 input[type="submit"]{
@@ -57,7 +106,9 @@ input[type="submit"]{
     background: #0065fc;
     color: white;
     padding: 12px;
+    font-weight: 500;
 }
+
 
 .logo{
     width: 17px;
@@ -71,13 +122,14 @@ input[type="submit"]{
     border: 1px solid rgb(233, 233, 233);
     border-radius: 20% 0% 0% 20%;
     background-color: rgb(233, 233, 233);
-    padding: 12px 13px;
+    padding: 13px 13px;
 }
 
 #filtre{
     display: flex;
     align-items: center;
     margin-top: 25px;
+    font-weight: bold;
 }
 
 #filtre p{
@@ -105,33 +157,54 @@ input[type="submit"]{
     max-width: 300px;
 }
 
+.infos{
+    display: flex;
+    align-items: center; 
+    margin: 25px 0;  
+}
+
+.infos img{
+    margin-right: 10px;
+    width: 17px;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+}
+
 #hotel{
     display: flex;
-    justify-content:
+    margin: 30px 0 50px 0;
 }
 
 #grid-gauche{
     background-color: #f2f2f2;
-    width: 50%;
+    width: 100%;
+    max-width: 850px;
     height: auto;
     border-radius: 20px;
-    padding: 40px;
-    margin-right: 80px;
+    padding: 20px 25px 30px 25px;
+    margin-right: 40px;
+    
 }
 
 .grid-hebergement{
     display: grid;
-    grid-template: repeat(2, 200px)  / repeat(3, 240px);
-    column-gap: 70px;
+    grid-template: repeat(2, 215px)  / repeat(3, 240px);
+    column-gap: 40px;
     row-gap: 40px;
     justify-items: center;
-    width: 100%;
+    width: 40%;
     padding: 10px;
+    margin-bottom: 20px;
+}
+
+#para_hebergement{
+    font-weight: bold;
 }
 
 .box1, .box2, .box3, .box4, .box5, .box6{
     display: grid;
-    grid-template: 130px repeat(3, 20px) / 270px;
+    grid-template: 130px repeat(3, 25px) / 240px;
     background-color: white;
     padding: 5px;
     border-radius: 15px;
@@ -208,11 +281,13 @@ input[type="submit"]{
     height: auto;
 }
 
-.titre, .prix, .star{
-    margin-left: 15px;
+.grid-hebergement .titre, .prix, .star{
+    margin-left: 10px;
+    margin-top: 7px;
 }
 
-.titre{
+
+.titre, .titre-populaire, .titre-activite{
     font-weight: 900;
     color: black;
 }
@@ -222,7 +297,12 @@ input[type="submit"]{
     border-radius: 20px;
     width: 400px;
     height: 600px;
-    padding: 40px;
+    padding: 20px 30px 40px 30px;
+}
+
+#logo_chart{
+    width: 25px;
+    height: auto;
 }
 
 .header-populaire{
@@ -233,17 +313,19 @@ input[type="submit"]{
 
 #grid-populaire{
     display: grid;
-    grid-template: repeat(2, 160px) / 400px ;
+    grid-template: repeat(2, 164px) / 375px ;
     row-gap: 20px;
     justify-content: center;
+    width: 100%;
 }
 
 .box7, .box8, .box9{
     display: grid;
-    grid-template: repeat(2, 40px) 70px / 150px 165px;
+    grid-template: repeat(2, 42px) 70px / 150px 175px;
     background-color: white;
     padding: 5px;
     border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 #grid-populaire .divImg{
@@ -269,9 +351,161 @@ input[type="submit"]{
     background-position: 50% 50%;
 }
 
-#grid-populaire .star{
+.star-populaire img{
+    width: 12px;
+    height: auto;
+}
+
+#grid-populaire .star-populaire{
     align-self: flex-end;
 }
+
+.titre-populaire, .prix-populaire, .star-populaire{
+    margin: 10px 0 10px 20px;
+}
+
+#grid-activites{
+    display: grid;
+    grid-template: 194px 41px 43px 164px / repeat(4, 301px);
+    column-gap: 40px;
+}
+
+.box10, .box11, .box12, .box13, .box14, .box15{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.box10{
+    grid-area: 1 / 1 / 5 / 2;
+    display: grid;
+    grid-template: 388px 56px / 301px;
+      
+}
+
+.box11{
+    grid-area: 1 / 2 / 3 / 3;
+    display: grid;
+    grid-template: 185px 56px / 301px;  
+}
+
+.box12{
+    grid-area: 4 / 2 / 5 / 3;
+    display: grid;
+    grid-template: 110px 56px / 301px;  
+}
+
+.box13{
+    grid-area: 1 / 3 / 5 / 4;
+    display: grid;
+    grid-template: 388px 56px / 301px;
+}
+
+.box14{
+    grid-area: 1 / 4 / 2 / 5;
+    display: grid;
+    grid-template: 140px 56px / 301px;  
+}
+
+.box15{
+    grid-area: 3 / 4 / 5 / 5;
+    display: grid;
+    grid-template: 152px 56px / 301px;  
+}
+
+.box10 .img{
+    background: url(images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 20px 20px 0 0;
+}
+
+.box11 .img{
+    background: url(images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+    grid-area: 1 / 1 / 2 / 2
+}
+
+.box12 .img{
+    background: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+    grid-area: 1 / 1 / 2 / 2
+}
+
+.box13 .img{
+    background: url(images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+    grid-area: 1 / 1 / 2 / 2
+}
+
+.box14 .img{
+    background: url(images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+    grid-area: 1 / 1 / 2 / 2
+}
+
+.box15 .img{
+    background: url(images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+    grid-area: 1 / 1 / 2 / 2
+}
+
+#grid-activites .titre-activite{
+    align-self: center;
+    margin-left: 20px;
+}
+
+footer{
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 80px;
+    display: flex;
+}
+
+footer p{
+    margin-bottom: 10px;
+}
+.colone1, .colone2{
+    margin-right: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
