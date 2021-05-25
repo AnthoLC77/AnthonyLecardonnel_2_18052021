@@ -157,6 +157,16 @@ input[type="submit"]{
     max-width: 300px;
 }
 
+
+.style-filtre:hover{
+    background: #0065fc;
+    border: 1px solid #0065fc;
+    color: white;
+    transition: 1.2s;
+}
+
+
+
 .infos{
     display: flex;
     align-items: center; 
@@ -187,7 +197,7 @@ input[type="submit"]{
     
 }
 
-.grid-hebergement{
+#grid-hebergement{
     display: grid;
     grid-template: repeat(2, 215px)  / repeat(3, 240px);
     column-gap: 40px;
@@ -209,6 +219,7 @@ input[type="submit"]{
     padding: 5px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    text-decoration: none;
 }
 
 .box1{
@@ -235,7 +246,7 @@ input[type="submit"]{
     grid-area: 2 / 3 / 3 / 4;
 }
 
-.grid-hebergement .divImg{
+#grid-hebergement .divImg{
     grid-area: 1 / 1 / 2 / 2;
     border-radius: 10px 10px 0 0;
 }
@@ -281,7 +292,7 @@ input[type="submit"]{
     height: auto;
 }
 
-.grid-hebergement .titre, .prix, .star{
+#grid-hebergement .titre, .prix, .star{
     margin-left: 10px;
     margin-top: 7px;
 }
@@ -326,6 +337,7 @@ input[type="submit"]{
     padding: 5px;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-decoration: none;
 }
 
 #grid-populaire .divImg{
@@ -360,6 +372,10 @@ input[type="submit"]{
     align-self: flex-end;
 }
 
+.prix, .prix-populaire{
+    color: black;
+}
+
 .titre-populaire, .prix-populaire, .star-populaire{
     margin: 10px 0 10px 20px;
 }
@@ -374,6 +390,7 @@ input[type="submit"]{
     background: white;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-decoration: none;
 }
 
 .box10{
