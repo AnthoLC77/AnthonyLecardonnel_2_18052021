@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="logo_reservia">
             <img src="images/logo/Reservia@3x.png" alt="logo">
         </div>
 
@@ -35,9 +35,12 @@
  
         <div id="barre-recherche">
             <form>
-                <img src="logo/map-marker-alt-solid.svg" alt="logoMap">
+                <img class="logo" id="logo_map" src="logo/map-marker-alt-solid.svg" alt="logoMap">
                 <input type="text" name="" id="ville" placeholder="Marseille, France">
-                <input type="submit" name="value" id="bouton" value="Rechercher">
+                <button type="submit" value="Rechercher">
+                    <span>Rechercher</span>
+                    <img class="logo" id="logo_loupe"  src="logo/search-solid.png" alt="search">
+                </button>
             </form>
         </div>
 <p>Filtres</p>
