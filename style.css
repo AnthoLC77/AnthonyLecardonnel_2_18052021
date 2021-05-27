@@ -24,6 +24,14 @@ h2{
     margin: 20px 0;
 }
 
+a{
+    text-decoration: none;
+}
+
+span{
+    font-weight: bold;
+}
+
 header img{
     width: 120px;
     height: 60px;
@@ -65,6 +73,10 @@ nav a{
     position: relative;
     bottom: 40px;
     left: 36px;
+}
+
+#trait_dessous{
+    display: none;
 }
 
 
@@ -176,7 +188,6 @@ button span{
     border: 1px solid #e0e0e0;
     border-radius: 50px 50px;
     padding: 0 15px 0 0;
-    max-width: 300px;
 }
 
 
@@ -230,9 +241,7 @@ button span{
     margin-bottom: 20px;
 }
 
-#para_hebergement{
-    font-weight: bold;
-}
+
 
 .box1, .box2, .box3, .box4, .box5, .box6{
     display: grid;
@@ -328,7 +337,7 @@ button span{
 #grid-droit{
     background-color: #f2f2f2;
     border-radius: 20px;
-    max-width: 487px;
+    width: 600px;
     height: 600px;
     padding: 20px 30px 40px 30px;
 }
@@ -350,7 +359,7 @@ button span{
     row-gap: 20px;
     justify-content: center;
     width: 100%;
-    max-width: 301px;
+    
 }
 
 .box7, .box8, .box9{
@@ -411,7 +420,6 @@ button span{
 
 .box10, .box11, .box12, .box13, .box14, .box15{
     grid-template: 152px 56px / 301px;
-    max-width: 360px ;
     background-color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 15px;
@@ -544,10 +552,10 @@ footer p{
 
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
 
     body{
-        max-width: 487px;
+        max-width: 490px;
     }
 
             /* HEADER */
@@ -563,13 +571,13 @@ footer p{
 
     #lien_2{
         position: relative;
-        left: 100px;
+        left: 110px;
     }
 
     #lien_3{
         position: relative;
         bottom: 67px;
-        left: 25px;
+        left: 35px;
     }
 
     #trait_dessus{
@@ -577,6 +585,7 @@ footer p{
     }
 
     #trait_dessous{
+        display: initial;
         background: linear-gradient(to right, #0065FC 50%, #e0e0e0 50%);
         width: 100%;
         height: 3px;
@@ -587,13 +596,29 @@ footer p{
 
     /* SECTION BARRE & FILTRE */
 
+    h1{
+        width: 350px;
+    }
+
     #first-section, .logo_reservia{
         padding-left: 20px;
     }
+
+    form{
+        margin-top: 30px;
+    }
+
+    input[type="text"]{
+        width: 250px;
+        height: 55px; 
+        font-size: 17px;
+    }
  
     button{
-        border-radius: 10px 10px 10px 10px;
-        width: 50px;
+        border-radius: 20px 20px 20px 20px;
+        width: 60px;
+        height: 57px;
+        left: -15px;
     }
 
     button img{
@@ -603,7 +628,14 @@ footer p{
     button span{
         display: none;
     }
-    
+
+    #logo_map{
+        
+        border-radius: 30% 0% 0% 30%;
+        
+        padding: 20px 20px;
+    }
+
     #filtre{
         display: flex;
         flex-wrap: wrap;
@@ -614,15 +646,13 @@ footer p{
         margin: 0 15px 15px 0;
     }
 
-
-
-
     /* SECTION HEBERGEMENT & POPULAIRES */
 
     #hotel{
-        max-width: 350px;
+        max-width: 490px;
         display: flex;
         flex-direction: column-reverse;
+        margin: 0px;
     }
 
     /* HEBERGEMENT */
@@ -631,9 +661,13 @@ footer p{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
-        max-width: 375px;
-        margin: 0 0 15px 0;
+        align-items: center;
+        width: 490px;
+        padding: 0;
+        margin: 0 0 30px 0;
+        row-gap: 20px;
+        background: white;
+        
     }
 
     #grid-gauche{
@@ -642,15 +676,25 @@ footer p{
         background: white;
     }
 
+    #span_hebergement{
+        margin: 0 0 20px 40px;
+        font-size: 1.2em;
+    }
+
     .box1, .box2, .box3, .box4, .box5, .box6{
-        grid-template:  130px repeat(3, 25px) / 340px; ;
-  }
+        grid-template:  130px repeat(3, 25px) / 400px; ;
+    }
+
+    #grid-gauche h2{
+        margin: 30px 0 20px 30px
+    }
 
     /* POPULAIRE */
 
     .header-populaire{
         display: flex;
         justify-content: space-between;
+        padding: 0 30px 0 30px;
     }
 
     #grid-populaire{
@@ -658,18 +702,16 @@ footer p{
         grid-template: repeat(2, 164px) / 430px ;
         align-items: center;
         justify-content: center;
-        max-width: 450px;
-        width: 450px;
+        width: 490px;
+        row-gap: 10px;
     }
 
     #grid-droit{
-        width: 447px;
+        width: 490px;
         border-radius: 0;
-        padding: 20px;
+        padding: 0px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
+        flex-direction: column;   
     }
 
     .box7, .box8, .box9{
@@ -683,86 +725,43 @@ footer p{
 
 
     /* SECTION ACTIVITES */
+    
+
+
 
     #grid-activites{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        row-gap: 30px;  
+        row-gap: 30px; 
+        grid-template: 194px 41px 43px 164px / 415px;   
     }
 
     .box10, .box11, .box12, .box13, .box14, .box15{
-        grid-template: 130px 56px / 340px;
-        max-width: 340px ;
+        grid-template: 160px 66px / 415px;
         text-decoration: none;
-        
+        width: 415px;    
     }
 
+    #activites h2{
+        margin: 40px 0 30px 40px;
+      }
 
-    
-    
-
-    
-
-
-
-
-
-
-   
-
-    
-
-   
-
-
-    
     /* FOOTER */
 
     footer{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        margin-top: 50px;
+        padding: 40px;
     }
-    
 
+    .colone1, .colone2, .colone3{
+        width: 300px;
+    }
 
+@media screen and (max-width: 726px){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
