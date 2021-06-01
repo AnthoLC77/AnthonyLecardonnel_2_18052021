@@ -5,10 +5,15 @@
 
 
 body{
-    width: 1320px;
+    width: 100%;
     margin: auto;
     font-family: 'Raleway', sans-serif;
     padding: 40px 0 0 0;
+}
+
+.container{
+    width: 1320px;
+    margin: auto;
 }
 
 header{
@@ -52,6 +57,10 @@ nav a{
     margin-left: 50px;
 }
 
+#inscription{
+    display: none;
+}
+
 #lien_1{
     color: #0065fc;
 }
@@ -79,6 +88,8 @@ nav a{
     display: none;
 }
 
+
+/* BARRE DE RECHERCHE */
 
 form{
     display: flex;
@@ -109,7 +120,6 @@ input[type="text"]{
     font-weight: bolder;
 }
 
-
 button{
     position: relative;
     left: -5px;
@@ -124,7 +134,6 @@ button{
     border: 0 none;
     outline: 0;
 }
-
 
 input[type="submit"]{ 
     position: relative;
@@ -158,6 +167,8 @@ button span{
     padding: 13px 13px;
 }
 
+
+/* FILTRES */ 
 
 #filtre{
     display: flex;
@@ -198,7 +209,7 @@ button span{
     transition: 1.2s;
 }
 
-
+/* INFOS */
 
 .infos{
     display: flex;
@@ -214,38 +225,39 @@ button span{
     border-radius: 50px;
 }
 
+
+
+/* SECTION HOTEL */
+
 #hotel{
     display: flex;
     margin: 30px 0 50px 0;
 }
 
-#grid-gauche{
-    background-color: #f2f2f2;
-    width: 100%;
-    max-width: 850px;
-    height: auto;
-    border-radius: 20px;
-    padding: 20px 25px 30px 25px;
-    margin-right: 40px;
-    
-}
+
+/* GRID HEBERGEMENT */
 
 #grid-hebergement{
+    background: #f2f2f2;
+    padding: 15px 25px;
+    margin-right: 30px;
+    border-radius: 20px;
     display: grid;
-    grid-template: repeat(2, 215px)  / repeat(3, 240px);
-    column-gap: 40px;
-    row-gap: 40px;
-    justify-items: center;
-    width: 40%;
-    padding: 10px;
-    margin-bottom: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns:repeat(3,260px); 
+    grid-template-rows:70px repeat(2, 200px) 70px;
+    grid-template-areas:
+    "hebergement hebergement hebergement"
+    "box1 box2 box3"
+    "box4 box5 box6"
+    "span-hebergement span-hebergement span-hebergement";
 }
-
-
 
 .box1, .box2, .box3, .box4, .box5, .box6{
     display: grid;
-    grid-template: 130px repeat(3, 25px) / 240px;
+    grid-template-columns:250px;
+    grid-template-rows:115px repeat(3, 25px);
     background-color: white;
     padding: 5px;
     border-radius: 15px;
@@ -254,68 +266,79 @@ button span{
 }
 
 .box1{
-    grid-area: 1 / 1 / 2 / 2;  
+    grid-area:box1; 
 }
 
 .box2{
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: box2;
 }
 
 .box3{
-    grid-area: 1 / 3 / 2 / 4;
+    grid-area: box3;
 }
 
 .box4{
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: box4;
 }
 
 .box5{
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: box5;
 }
 
 .box6{
-    grid-area: 2 / 3 / 3 / 4;
+    grid-area: box6;
 }
 
-#grid-hebergement .divImg{
-    grid-area: 1 / 1 / 2 / 2;
+#titre-hebergement{
+    grid-area: hebergement;
+    width: max-content;
     border-radius: 10px 10px 0 0;
+}
+
+#span_hebergement{
+    grid-area: span-hebergement;
 }
 
 .box1 .divImg{
     background: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
     background-size: cover;
     background-position: 50% 50%;
+    border-radius: 10px 10px 0 0;
 }
 
 .box2 .divImg{
     background: url(images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
     background-size: cover;
     background-position: 50% 50%;
+    border-radius: 10px 10px 0 0;
 }
 
 .box3 .divImg{
     background: url(images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
     background-size: cover;
     background-position: 50% 50%;
+    border-radius: 10px 10px 0 0;
 }
 
 .box4 .divImg{
     background: url(images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
     background-size: cover;
     background-position: 50% 50%;
+    border-radius: 10px 10px 0 0;
 }
 
 .box5 .divImg{
     background: url(images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
     background-size: cover;
     background-position: 50% 50%;
+    border-radius: 10px 10px 0 0;
 }
 
 .box6 .divImg{
     background: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg); 
     background-size: cover;
     background-position: 50% 50%;
+    border-radius: 10px 10px 0 0;
 }
 
 .star img{
@@ -334,37 +357,44 @@ button span{
     color: black;
 }
 
-#grid-droit{
-    background-color: #f2f2f2;
+
+ /* GRID POPULAIRE */
+
+ #grid-populaire{
+    background: #f2f2f2;
+    padding: 15px 25px;
     border-radius: 20px;
-    width: 600px;
-    height: 600px;
-    padding: 20px 30px 40px 30px;
+    row-gap: 20px;
+    display: grid;
+    grid-auto-columns: 375px;
+    grid-template-rows: 70px repeat(3, 150px);
+    grid-template-areas:
+    "headerPopulaire"
+    "box7"
+    "box8"
+    "box9";
 }
 
-#logo_chart{
-    width: 25px;
-    height: auto;
+.box7{
+    grid-area: box7 ;
+}
+
+.box8{
+    grid-area: box8 ;
+}
+
+.box9{
+    grid-area: box9 ;
 }
 
 .header-populaire{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#grid-populaire{
-    display: grid;
-    grid-template: repeat(2, 164px) / 375px ;
-    row-gap: 20px;
-    justify-content: center;
-    width: 100%;
-    
+    grid-area: headerPopulaire;
 }
 
 .box7, .box8, .box9{
     display: grid;
-    grid-template: repeat(2, 42px) 70px / 150px 175px;
+    grid-template-columns: 130px 170px;
+    grid-template-rows: 40px 30px 70px;
     background-color: white;
     padding: 5px;
     border-radius: 20px;
@@ -374,7 +404,7 @@ button span{
 
 #grid-populaire .divImg{
     grid-area: 1 / 1 / 4 / 2;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
 }
 
 .box7 .divImg{
@@ -400,7 +430,7 @@ button span{
     height: auto;
 }
 
-#grid-populaire .star-populaire{
+.star-populaire{
     align-self: flex-end;
 }
 
@@ -409,12 +439,29 @@ button span{
 }
 
 .titre-populaire, .prix-populaire, .star-populaire{
-    margin: 10px 0 10px 20px;
+    margin-left: 10px;
 }
+
+#logo_chart{
+    width: 25px;
+    height: auto;
+}
+
+.header-populaire{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* GRID ACTIVITES */
+
+
 
 #grid-activites{
     display: grid;
-    grid-template: 194px 41px 43px 164px / 301px;
+    grid-template-columns: 301px;
+    grid-template-rows: 194px 41px 43px 164px;
     column-gap: 40px;
 }
 
@@ -422,15 +469,13 @@ button span{
     grid-template: 152px 56px / 301px;
     background-color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    border-radius: 15px;
+    border-radius: 15px;  
 }
 
 .box10{
     grid-area: 1 / 1 / 5 / 2;
     display: grid;
-    grid-template: 388px 56px / 301px;
-    width: 100%;
-      
+    grid-template: 388px 56px / 301px;    
 }
 
 .box11{
@@ -462,6 +507,8 @@ button span{
     display: grid;
     grid-template: 152px 56px / 301px; 
 }
+
+
 
 .box10 .img{
     background: url(images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
@@ -516,6 +563,14 @@ button span{
     margin-left: 20px;
 }
 
+
+
+
+
+
+
+
+
 footer{
     background-color: #f2f2f2;
     padding: 20px;
@@ -555,9 +610,13 @@ footer p{
 @media screen and (max-width: 500px) {
 
     body{
-        max-width: 490px;
+        display: block;
+        clear: both;
     }
 
+    .container{
+        width: 100%;
+    }
             /* HEADER */
 
     header{
@@ -565,19 +624,41 @@ footer p{
         flex-direction: column;
     }
 
+    h1, h2{
+        font-size: 1.3em;
+    }
+
     nav{
         margin-top: 30px;
     }
 
-    #lien_2{
-        position: relative;
-        left: 110px;
+     nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a{
+        margin: 0;
+    }
+
+    .logo_reservia{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #lien_1, #lien_2{
+        margin-right: 20px
+    }
+
+
+    #inscription{
+        display: initial;
+        margin-right: 20px;
     }
 
     #lien_3{
-        position: relative;
-        bottom: 67px;
-        left: 35px;
+        display: none;
     }
 
     #trait_dessus{
@@ -593,12 +674,8 @@ footer p{
 
     }
 
-
     /* SECTION BARRE & FILTRE */
 
-    h1{
-        width: 350px;
-    }
 
     #first-section, .logo_reservia{
         padding-left: 20px;
@@ -609,7 +686,6 @@ footer p{
     }
 
     input[type="text"]{
-        width: 250px;
         height: 55px; 
         font-size: 17px;
     }
@@ -649,7 +725,6 @@ footer p{
     /* SECTION HEBERGEMENT & POPULAIRES */
 
     #hotel{
-        max-width: 490px;
         display: flex;
         flex-direction: column-reverse;
         margin: 0px;
@@ -661,30 +736,20 @@ footer p{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 490px;
-        padding: 0;
+        padding: 0 20px 0 20px;
         margin: 0 0 30px 0;
         row-gap: 20px;
         background: white;
-        
     }
 
-    #grid-gauche{
-        margin: 0;
-        padding: 0;
-        background: white;
+    .box1, .box2, .box3, .box4, .box5, .box6{
+        grid-template-columns: none;
     }
 
     #span_hebergement{
         margin: 0 0 20px 40px;
         font-size: 1.2em;
     }
-
-    .box1, .box2, .box3, .box4, .box5, .box6{
-        grid-template:  130px repeat(3, 25px) / 400px; ;
-    }
-
     #grid-gauche h2{
         margin: 30px 0 20px 30px
     }
@@ -698,25 +763,9 @@ footer p{
     }
 
     #grid-populaire{
-        display: grid;
-        grid-template: repeat(2, 164px) / 430px ;
-        align-items: center;
-        justify-content: center;
-        width: 490px;
-        row-gap: 10px;
-    }
-
-    #grid-droit{
-        width: 490px;
-        border-radius: 0;
-        padding: 0px;
         display: flex;
-        flex-direction: column;   
-    }
-
-    .box7, .box8, .box9{
-        display: grid;
-        grid-template: repeat(2, 42px) 60px / 150px 175px;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #grid-populaire .divImg{
@@ -733,15 +782,14 @@ footer p{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        row-gap: 30px; 
-        grid-template: 194px 41px 43px 164px / 415px;   
+        row-gap: 30px;  
+        padding: 0 20px; 
     }
 
     .box10, .box11, .box12, .box13, .box14, .box15{
-        grid-template: 160px 66px / 415px;
         text-decoration: none;
-        width: 415px;    
+        grid-template-rows: 110px 56px;
+        grid-template-columns: none;     
     }
 
     #activites h2{
@@ -753,13 +801,13 @@ footer p{
     footer{
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         margin-top: 50px;
         padding: 40px;
     }
 
     .colone1, .colone2, .colone3{
-        width: 300px;
+        width: 100%;
     }
 
 @media screen and (max-width: 726px){
