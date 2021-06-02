@@ -225,15 +225,12 @@ button span{
     border-radius: 50px;
 }
 
-
-
 /* SECTION HOTEL */
 
 #hotel{
     display: flex;
     margin: 30px 0 50px 0;
 }
-
 
 /* GRID HEBERGEMENT */
 
@@ -357,7 +354,6 @@ button span{
     color: black;
 }
 
-
  /* GRID POPULAIRE */
 
  #grid-populaire{
@@ -453,10 +449,7 @@ button span{
     justify-content: space-between;
 }
 
-
 /* GRID ACTIVITES */
-
-
 
 #grid-activites{
     display: grid;
@@ -507,8 +500,6 @@ button span{
     display: grid;
     grid-template: 152px 56px / 301px; 
 }
-
-
 
 .box10 .img{
     background: url(images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
@@ -563,13 +554,7 @@ button span{
     margin-left: 20px;
 }
 
-
-
-
-
-
-
-
+/* FOOTER */ 
 
 footer{
     background-color: #f2f2f2;
@@ -585,31 +570,7 @@ footer p{
     margin-right: 300px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*@media screen and (max-width: 500px)*/
-
-
+/* MEDIA MOBILE */
 
 @media only screen and ( min-width: 320px ) and ( max-width : 480px ){
 
@@ -712,7 +673,6 @@ footer p{
     #logo_map{
         
         border-radius: 30% 0% 0% 30%;
-        
         padding: 20px 20px;
     }
 
@@ -778,9 +738,6 @@ footer p{
 
     /* SECTION ACTIVITES */
     
-
-
-
     #grid-activites{
         display: flex;
         flex-direction: column;
@@ -816,14 +773,12 @@ footer p{
     .colone1, .colone2, .colone3{
         width: 100%;
     }
-
-
 }
 
 
+/* MEDIA TABLET */ 
 
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+@media only screen and (min-width : 768px) and (max-width : 1024px){
 
     .container{
         width:auto;
@@ -833,9 +788,6 @@ footer p{
         padding: 0 15px;
     }
 
-    #titre_activites{
-        text-align: center;
-    }
     #first-section{
         padding: 0 15px;
     }
@@ -855,6 +807,8 @@ footer p{
         grid-auto-columns:auto;
     }
 
+    /* GRID ACTIVITES */
+
     #grid-activites{
         display: flex;
         flex-wrap: wrap;
@@ -866,6 +820,12 @@ footer p{
         grid-template-rows: 110px 56px;
             
     }
+
+    #titre_activites{
+        text-align: center;
+    }
+
+    /* FOOTER  */
 
     footer{
         display: flex;
