@@ -5,8 +5,6 @@
 
 
 body{
-    width: 100%;
-    margin: auto;
     font-family: 'Raleway', sans-serif;
     padding: 40px 0 0 0;
 }
@@ -78,7 +76,6 @@ nav a{
 #trait_dessus{
     border-top: 2px solid #0065fc;
     width: 150px;
-    height: auto;
     position: relative;
     bottom: 40px;
     left: 36px;
@@ -128,11 +125,7 @@ button{
     height: 44px;
     background: #0065fc;
     color: white;
-    padding: 12px;
-    font-weight: 500;
-    box-shadow: none;
     border: 0 none;
-    outline: 0;
 }
 
 input[type="submit"]{ 
@@ -172,13 +165,20 @@ button span{
 
 #filtre{
     display: flex;
-    align-items: center;
     margin-top: 25px;
-    font-weight: bold;
+    align-items: center;
+}
+
+.mobile_tablet{
+    display: none;
+}
+
+.bureau{
+    margin-right: 30px;
 }
 
 #filtre p{
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .style-filtre img{
@@ -219,7 +219,7 @@ button span{
 
 .infos img{
     margin-right: 10px;
-    width: 17px;
+    width: 20px;
     height: auto;
     border: 1px solid #e0e0e0;
     border-radius: 50px;
@@ -682,8 +682,16 @@ footer p{
         max-width: 375px;
     }
 
+    .mobile_tablet{
+        display: initial;
+    }
+
     .style-filtre{
         margin: 0 15px 15px 0;
+    }
+
+    .bureau{
+        display: none;
     }
 
     /* SECTION HEBERGEMENT & POPULAIRES */
